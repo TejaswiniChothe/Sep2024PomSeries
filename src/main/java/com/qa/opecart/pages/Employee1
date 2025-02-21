@@ -1,0 +1,8 @@
+package com.qa.opecart.pages;
+
+public class Employee1 {
+	public void test()
+	{
+		System.out.println("test method");
+	}
+}
