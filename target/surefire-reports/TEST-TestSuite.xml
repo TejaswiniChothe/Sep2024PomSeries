@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="50.87" tests="33" errors="0" skipped="6" failures="2">
+  <properties>
+    <property name="surefire.suiteXmlFiles" value="src/test/resource/testrunner/chrome.xml"/>
+    <property name="java.specification.version" value="23"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\maven\apache-maven-3.9.9\boot\plexus-classworlds-2.8.0.jar"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="maven.conf" value="C:\maven\apache-maven-3.9.9/conf"/>
+    <property name="java.vm.specification.version" value="23"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-23\bin"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install -Denv=qa -Dsurefire.suiteXmlFiles=src/test/resource/testrunner/chrome.xml"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="maven.home" value="C:\maven\apache-maven-3.9.9"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Tejaswini"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-10-15"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-23"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="23.0.1+11-39"/>
+    <property name="user.name" value="Tejaswini"/>
+    <property name="stdout.encoding" value="cp437"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Tejaswini\AppData\Local\Temp\"/>
+    <property name="java.version" value="23.0.1"/>
+    <property name="user.dir" value="C:\Users\Tejaswini\eclipse-workspace\Sep2024PomSeries"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Tejaswini\eclipse-workspace\Sep2024PomSeries"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="env" value="qa"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-23\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-23\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Program Files\nodejs\node_modules;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\maven\apache-maven-3.9.9\bin;C:\Users\Tejaswini\scoop\shims;C:\Users\Tejaswini\anaconda3;C:\Users\Tejaswini\anaconda3\Library\mingw-w64\bin;C:\Users\Tejaswini\anaconda3\Library\usr\bin;C:\Users\Tejaswini\anaconda3\Library\bin;C:\Users\Tejaswini\anaconda3\Scripts;C:\Users\Tejaswini\AppData\Local\Microsoft\WindowsApps;C:\Users\Tejaswini\AppData\Roaming\npm;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="cp437"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="23.0.1+11-39"/>
+    <property name="classworlds.conf" value="C:\maven\apache-maven-3.9.9\bin\m2.conf"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="library.jansi.path" value="C:\maven\apache-maven-3.9.9\lib\jansi-native"/>
+    <property name="java.class.version" value="67.0"/>
+  </properties>
+  <testcase name="footerTest" classname="com.qa.opencart.test.LoginPageTest" time="1.79"/>
+  <testcase name="footerTest" classname="com.qa.opencart.test.LoginPageTest" time="0.091"/>
+  <testcase name="footerTest" classname="com.qa.opencart.test.LoginPageTest" time="0.459"/>
+  <testcase name="footerTest" classname="com.qa.opencart.test.LoginPageTest" time="0.338"/>
+  <testcase name="headersTest" classname="com.qa.opencart.test.HomePageTest" time="0.256"/>
+  <testcase name="homePageTitleTest" classname="com.qa.opencart.test.HomePageTest" time="0.092"/>
+  <testcase name="forgotPwdLinkExistTest" classname="com.qa.opencart.test.LoginPageTest" time="0.068"/>
+  <testcase name="productImagesCountTest" classname="com.qa.opencart.test.ProductInfoPageTest" time="1.608"/>
+  <testcase name="productImagesCountTest" classname="com.qa.opencart.test.ProductInfoPageTest" time="0.097"/>
+  <testcase name="productImagesCountTest" classname="com.qa.opencart.test.ProductInfoPageTest" time="0.83"/>
+  <testcase name="productImagesCountTest" classname="com.qa.opencart.test.ProductInfoPageTest" time="2.037"/>
+  <testcase name="productImagesCountTest" classname="com.qa.opencart.test.ProductInfoPageTest" time="1.65"/>
+  <testcase name="homePageURLTest" classname="com.qa.opencart.test.HomePageTest" time="0">
+    <skipped message="Cannot invoke &quot;String.contains(java.lang.CharSequence)&quot; because the return value of &quot;com.qa.opecart.pages.HomePage.getHomePageURL()&quot; is null"/>
+    <system-out><![CDATA[I am in onTestStart method productImagesCountTest start
+search key: macbook
+product name: MacBook Air
+URL is not fount after: 5 Seconds 
+I am in onTestSkipped method homePageURLTest skipped
+]]></system-out>
+  </testcase>
+  <testcase name="homePageURLTest" classname="com.qa.opencart.test.HomePageTest" time="0">
+    <skipped message="Cannot invoke &quot;String.contains(java.lang.CharSequence)&quot; because the return value of &quot;com.qa.opecart.pages.HomePage.getHomePageURL()&quot; is null"/>
+    <system-out><![CDATA[I am in onTestStart method productImagesCountTest start
+search key: samsung
+product name: Samsung Galaxy Tab 10.1
+URL is not fount after: 5 Seconds 
+I am in onTestSkipped method homePageURLTest skipped
+]]></system-out>
+  </testcase>
+  <testcase name="homePageURLTest" classname="com.qa.opencart.test.HomePageTest" time="0">
+    <skipped message="Cannot invoke &quot;String.contains(java.lang.CharSequence)&quot; because the return value of &quot;com.qa.opecart.pages.HomePage.getHomePageURL()&quot; is null"/>
+    <system-out><![CDATA[I am in onFinish method Product Info Page Test
+URL is not fount after: 5 Seconds 
+I am in onTestSkipped method homePageURLTest skipped
+]]></system-out>
+  </testcase>
+  <testcase name="homePageURLTest" classname="com.qa.opencart.test.HomePageTest" time="4.845">
+    <failure message="Cannot invoke &quot;String.contains(java.lang.CharSequence)&quot; because the return value of &quot;com.qa.opecart.pages.HomePage.getHomePageURL()&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because the return value of "com.qa.opecart.pages.HomePage.getHomePageURL()" is null
+	at com.qa.opencart.test.HomePageTest.homePageURLTest(HomePageTest.java:32)
+</failure>
+    <system-out><![CDATA[I am in onTestStart method loginPageTitleTest start
+URL is not fount after: 5 Seconds 
+I am in onTestFailure method homePageURLTest failed
+Screenshot captured for test case:homePageURLTest
+]]></system-out>
+  </testcase>
+  <testcase name="loginPageTitleTest" classname="com.qa.opencart.test.LoginPageTest" time="0">
+    <skipped message="==Title is not matched== expected [Account Logins] but found [null]"/>
+    <system-out><![CDATA[I am in onTestStart method productImagesCountTest start
+search key: imac
+title is not fount after: 5
+I am in onTestSkipped method loginPageTitleTest skipped
+]]></system-out>
+  </testcase>
+  <testcase name="loginPageTitleTest" classname="com.qa.opencart.test.LoginPageTest" time="0">
+    <skipped message="==Title is not matched== expected [Account Logins] but found [null]"/>
+    <system-out><![CDATA[I am in onTestStart method productInfoTest start
+search key: macbook
+I am in onTestStart method homePageURLTest start
+product name: MacBook Pro
+title is not fount after: 5
+I am in onTestSkipped method loginPageTitleTest skipped
+]]></system-out>
+  </testcase>
+  <testcase name="loginPageTitleTest" classname="com.qa.opencart.test.LoginPageTest" time="0">
+    <skipped message="==Title is not matched== expected [Account Logins] but found [null]"/>
+    <system-out><![CDATA[I am in onTestStart method homePageURLTest start
+title is not fount after: 5
+I am in onTestSkipped method loginPageTitleTest skipped
+]]></system-out>
+  </testcase>
+  <testcase name="loginPageTitleTest" classname="com.qa.opencart.test.LoginPageTest" time="0.108">
+    <failure message="==Title is not matched== expected [Account Logins] but found [null]" type="java.lang.AssertionError">java.lang.AssertionError: ==Title is not matched== expected [Account Logins] but found [null]
+	at com.qa.opencart.test.LoginPageTest.loginPageTitleTest(LoginPageTest.java:32)
+</failure>
+    <system-out><![CDATA[I am in onTestStart method searchTest start
+search key: macbook
+]]></system-out>
+  </testcase>
+  <testcase name="productInfoTest" classname="com.qa.opencart.test.ProductInfoPageTest" time="0.359"/>
+  <testcase name="productSearchHeaderTest" classname="com.qa.opencart.test.ProductInfoPageTest" time="1.235"/>
+  <testcase name="productSearchHeaderTest" classname="com.qa.opencart.test.ProductInfoPageTest" time="0.999"/>
+  <testcase name="productSearchHeaderTest" classname="com.qa.opencart.test.ProductInfoPageTest" time="1.099"/>
+  <testcase name="logoutLinkExistTest" classname="com.qa.opencart.test.HomePageTest" time="0.1"/>
+  <testcase name="loginPageURLTest" classname="com.qa.opencart.test.LoginPageTest" time="0.051"/>
+  <testcase name="logoTest" classname="com.qa.opencart.test.LoginPageTest" time="0.071"/>
+  <testcase name="searchTest" classname="com.qa.opencart.test.HomePageTest" time="0.609"/>
+  <testcase name="searchTest" classname="com.qa.opencart.test.HomePageTest" time="0.989"/>
+  <testcase name="searchTest" classname="com.qa.opencart.test.HomePageTest" time="0.953"/>
+  <testcase name="searchTest" classname="com.qa.opencart.test.HomePageTest" time="0.817"/>
+  <testcase name="searchTest" classname="com.qa.opencart.test.HomePageTest" time="10.846"/>
+  <testcase name="loginTest" classname="com.qa.opencart.test.LoginPageTest" time="0.993"/>
+</testsuite>

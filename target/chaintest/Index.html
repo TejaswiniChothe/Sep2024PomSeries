@@ -1,0 +1,1076 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>chaintest</title>
+    <link href="https://cdn.jsdelivr.net/gh/anshooarora/chaintest@47a8aee36827ccc0dd3f5a4b4655846d3d463c15/cdn/simple/version/chaintest-pkg.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style></style>
+</head>
+
+<body data-bs-theme="dark">
+  <nav class="navbar border-bottom">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <a class="navbar-brand" href="#">ChainTest</a>
+        <span class="ms-3 fs-6">Open Cart Application</span>
+      </div>
+      <div>
+        <span class="badge badge-outline text-lg"><i class="bi bi-hourglass me-1"></i> 58s</span>
+        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1 text-success"></i> 2025-02-23 07:56:40 PM</span>
+        <span class="badge badge-outline text-lg me-3"><i class="bi bi-clock me-1 text-danger"></i> 2025-02-23 07:57:39 PM</span>
+          <button role="button" id="sys-info" class="btn btn-outline-primary smaller" title="View System Info">
+            <i class="bi bi-pc-display-horizontal"></i></button>
+        <button role="button" id="shortcuts" class="btn btn-outline-primary smaller" title="Shortcuts">
+          <i class="bi bi-info-circle"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="summary" class="container-fluid bg-body-tertiary">
+    <!-- dashboard section -->
+    <div id="dashboard" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <div class="card card-custom" style="height: 175px">
+              <div class="card-header">
+                Suites
+              </div>
+              <div class="card-body d-flex justify-content-center" style="height: 90px;">
+                <div class="chart-view center" style="margin-left: -1rem;">
+                  <canvas id="stats1"></canvas>
+                </div>
+              </div>
+              <div class="card-footer small">
+                <span id="sp1">0</span> Passed,
+                <span id="sf1">1</span> Failed,
+                <span id="ss1">0</span> Skipped
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card card-custom" style="height: 175px">
+              <div class="card-header">
+                Classes
+              </div>
+              <div class="card-body d-flex justify-content-center" style="height: 90px;">
+                <div class="chart-view center" style="margin-left: -1rem;">
+                  <canvas id="stats2"></canvas>
+                </div>
+              </div>
+              <div class="card-footer small">
+                <span id="sp2">1</span> Passed,
+                <span id="sf2">2</span> Failed,
+                <span id="ss2">0</span> Skipped
+              </div>
+            </div>
+          </div>
+            <div class="col-4">
+              <div class="card card-custom" style="height: 175px">
+                <div class="card-header">
+                  Methods
+                </div>
+                <div class="card-body d-flex justify-content-center" style="height: 90px;">
+                  <div class="chart-view center" style="margin-left: -1rem;">
+                    <canvas id="stats3"></canvas>
+                  </div>
+                </div>
+                <div class="card-footer small">
+                  <span id="sp3">25</span> Passed,
+                  <span id="sf3">8</span> Failed,
+                  <span id="ss3">0</span> Skipped
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- /dashboard section -->
+
+    <!-- tag section -->
+    <!-- /tag section -->
+  </div>
+
+  <div class="container-fluid">
+    <div class="py-3 mb-5">
+      <div class="container d-flex justify-content-between">
+        <div class="input-group">
+          <input type="text" id="q" class="form-control border" placeholder="Search..." aria-label="Search...">
+          <button class="btn border btn-sm text-success status-filter" id="passed" type="button">Passed</button>
+          <button class="btn border btn-sm text-warning status-filter" id="skipped" type="button">Skipped</button>
+          <button class="btn border btn-sm text-danger status-filter" id="failed" type="button">Failed</button>
+          <button id="clear-filters" class="btn border btn-sm"><i class="bi bi-x-lg me-1"></i>Clear all filters</button>
+          <button type="button" id="summary-toggle" class="btn border btn-sm"><i class="bi bi-toggle-on me-1"></i> Toggle Summary Section</button>
+        </div>
+      </div>
+    </div>
+      <div class="test-container failed">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <h6 class="mb-3 testname fs-6 failed">Opencart App Test Regression Suite</h6>
+              <div class="small">
+                <span class="badge badge-outline"><i class="bi bi-hourglass me-1"></i> 56s</span>
+                <span class="badge text-bg-info"><i class="bi bi-clock me-1"></i>
+                  2025-02-23 07:56:42 PM</span>
+                <span class="badge text-bg-warning"><i class="bi bi-clock me-1"></i>
+                  2025-02-23 07:57:38 PM</span>
+              </div>
+              
+            </div>
+            <div class="col-8">
+                <div class="card mb-3 result failed">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+                        <span class="fs-6 ms-2">com.qa.opencart.test.LoginPageTest</span>
+                      </div>
+                      <div>
+                        <span class="badge text-dark bg-light">31s</span>
+                      </div>
+                    </div>
+                    
+  <div class="mt-3 border-top">
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">footerTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">924ms</span>
+        </div>
+      </div>
+      <p class="desc">[About Us]</p>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">footerTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">2s</span>
+        </div>
+      </div>
+      <p class="desc">[Contact Us]</p>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">footerTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">1s</span>
+        </div>
+      </div>
+      <p class="desc">[Specials]</p>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">footerTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">678ms</span>
+        </div>
+      </div>
+      <p class="desc">[Order History]</p>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">forgotPwdLinkExistTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">156ms</span>
+        </div>
+      </div>
+      <p class="desc"></p>
+    </div>
+    <div class="leaf failed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+          <span class="fs-6 ms-2">loginPageTitleTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">5s</span>
+        </div>
+      </div>
+      <p class="desc"></p>
+        <pre class="py-2 mt-2 mb-4">java.lang.AssertionError: ==Title is not matched== expected [Account Logins] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.qa.opencart.test.LoginPageTest.loginPageTitleTest(LoginPageTest.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre>
+        <div class="mt-3">
+          <pre class="pb-0">
+Verifying Loging Page Title
+Title of page is : null
+          </pre>
+        </div>
+        <div class="row mt-3">
+            <div class="embed col-2 mb-1">
+              <img src="resources/b155b1d4-8138-40b2-a44f-bbc437c85bf1.png" />
+            </div>
+        </div>
+    </div>
+    <div class="leaf failed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+          <span class="fs-6 ms-2">loginPageTitleTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">5s</span>
+        </div>
+      </div>
+      <p class="desc"></p>
+        <pre class="py-2 mt-2 mb-4">java.lang.AssertionError: ==Title is not matched== expected [Account Logins] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.qa.opencart.test.LoginPageTest.loginPageTitleTest(LoginPageTest.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre>
+        <div class="mt-3">
+          <pre class="pb-0">
+Verifying Loging Page Title
+Title of page is : null
+          </pre>
+        </div>
+        <div class="row mt-3">
+            <div class="embed col-2 mb-1">
+              <img src="resources/e2e53f3f-f932-4f85-8e7c-e3c6cb9c14b8.png" />
+            </div>
+        </div>
+    </div>
+    <div class="leaf failed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+          <span class="fs-6 ms-2">loginPageTitleTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">5s</span>
+        </div>
+      </div>
+      <p class="desc"></p>
+        <pre class="py-2 mt-2 mb-4">java.lang.AssertionError: ==Title is not matched== expected [Account Logins] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.qa.opencart.test.LoginPageTest.loginPageTitleTest(LoginPageTest.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre>
+        <div class="mt-3">
+          <pre class="pb-0">
+Verifying Loging Page Title
+Title of page is : null
+          </pre>
+        </div>
+        <div class="row mt-3">
+            <div class="embed col-2 mb-1">
+              <img src="resources/ea65d504-3e86-47ce-8085-be0ffe16a502.png" />
+            </div>
+        </div>
+    </div>
+    <div class="leaf failed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+          <span class="fs-6 ms-2">loginPageTitleTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">5s</span>
+        </div>
+      </div>
+      <p class="desc"></p>
+        <pre class="py-2 mt-2 mb-4">java.lang.AssertionError: ==Title is not matched== expected [Account Logins] but found [null]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.qa.opencart.test.LoginPageTest.loginPageTitleTest(LoginPageTest.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre>
+        <div class="mt-3">
+          <pre class="pb-0">
+Verifying Loging Page Title
+Title of page is : null
+          </pre>
+        </div>
+        <div class="row mt-3">
+            <div class="embed col-2 mb-1">
+              <img src="resources/a43e9188-2ee0-4d0c-bd79-438158d480be.png" />
+            </div>
+        </div>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">loginPageURLTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">17ms</span>
+        </div>
+      </div>
+      <p class="desc"></p>
+        <div class="mt-3">
+          <pre class="pb-0">
+URL of page is : https://naveenautomationlabs.com/opencart/index.php?route=account/login
+          </pre>
+        </div>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">logoTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">38ms</span>
+        </div>
+      </div>
+      <p class="desc"></p>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">loginTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">1s</span>
+        </div>
+      </div>
+      <p class="desc"></p>
+        <div class="mt-3">
+          <pre class="pb-0">
+home page title==>My Account
+          </pre>
+        </div>
+    </div>
+  </div>
+
+                  </div>
+                </div>
+                <div class="card mb-3 result passed">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                          <i class="bi bi-check-circle-fill text-success"></i>
+                        <span class="fs-6 ms-2">com.qa.opencart.test.ProductInfoPageTest</span>
+                      </div>
+                      <div>
+                        <span class="badge text-dark bg-light">18s</span>
+                      </div>
+                    </div>
+                    
+  <div class="mt-3 border-top">
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">productImagesCountTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">1s</span>
+        </div>
+      </div>
+      <p class="desc">[macbook, MacBook Pro, 4]</p>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">productImagesCountTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">926ms</span>
+        </div>
+      </div>
+      <p class="desc">[macbook, MacBook Air, 4]</p>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">productImagesCountTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">1s</span>
+        </div>
+      </div>
+      <p class="desc">[imac, iMac, 3]</p>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">productImagesCountTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">966ms</span>
+        </div>
+      </div>
+      <p class="desc">[samsung, Samsung SyncMaster 941BW, 1]</p>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">productImagesCountTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">1s</span>
+        </div>
+      </div>
+      <p class="desc">[samsung, Samsung Galaxy Tab 10.1, 7]</p>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">productInfoTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">1s</span>
+        </div>
+      </div>
+      <p class="desc"></p>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">productSearchHeaderTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">993ms</span>
+        </div>
+      </div>
+      <p class="desc">[macbook, MacBook Pro]</p>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">productSearchHeaderTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">931ms</span>
+        </div>
+      </div>
+      <p class="desc">[imac, iMac]</p>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">productSearchHeaderTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">1s</span>
+        </div>
+      </div>
+      <p class="desc">[samsung, Samsung SyncMaster 941BW]</p>
+    </div>
+  </div>
+
+                  </div>
+                </div>
+                <div class="card mb-3 result failed">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+                        <span class="fs-6 ms-2">com.qa.opencart.test.HomePageTest</span>
+                      </div>
+                      <div>
+                        <span class="badge text-dark bg-light">36s</span>
+                      </div>
+                    </div>
+                    
+  <div class="mt-3 border-top">
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">headersTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">102ms</span>
+        </div>
+      </div>
+      <p class="desc"></p>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">homePageTitleTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">47ms</span>
+        </div>
+      </div>
+      <p class="desc"></p>
+        <div class="mt-3">
+          <pre class="pb-0">
+Verifying Home Page URL
+home page title==>My Account
+          </pre>
+        </div>
+    </div>
+    <div class="leaf failed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+          <span class="fs-6 ms-2">homePageURLTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">5s</span>
+        </div>
+      </div>
+      <p class="desc"></p>
+        <pre class="py-2 mt-2 mb-4">java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because the return value of "com.qa.opecart.pages.HomePage.getHomePageURL()" is null
+	at com.qa.opencart.test.HomePageTest.homePageURLTest(HomePageTest.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre>
+        <div class="mt-3">
+          <pre class="pb-0">
+Verifying Home Page URL
+home page url==>null
+          </pre>
+        </div>
+        <div class="row mt-3">
+            <div class="embed col-2 mb-1">
+              <img src="resources/9fe368bc-6192-4cf3-a934-2d1fb9c5bf7c.png" />
+            </div>
+        </div>
+    </div>
+    <div class="leaf failed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+          <span class="fs-6 ms-2">homePageURLTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">5s</span>
+        </div>
+      </div>
+      <p class="desc"></p>
+        <pre class="py-2 mt-2 mb-4">java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because the return value of "com.qa.opecart.pages.HomePage.getHomePageURL()" is null
+	at com.qa.opencart.test.HomePageTest.homePageURLTest(HomePageTest.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre>
+        <div class="mt-3">
+          <pre class="pb-0">
+Verifying Home Page URL
+home page url==>null
+          </pre>
+        </div>
+        <div class="row mt-3">
+            <div class="embed col-2 mb-1">
+              <img src="resources/9fd83368-ff73-46ca-88ea-01466a0c0bcf.png" />
+            </div>
+        </div>
+    </div>
+    <div class="leaf failed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+          <span class="fs-6 ms-2">homePageURLTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">5s</span>
+        </div>
+      </div>
+      <p class="desc"></p>
+        <pre class="py-2 mt-2 mb-4">java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because the return value of "com.qa.opecart.pages.HomePage.getHomePageURL()" is null
+	at com.qa.opencart.test.HomePageTest.homePageURLTest(HomePageTest.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre>
+        <div class="mt-3">
+          <pre class="pb-0">
+Verifying Home Page URL
+home page url==>null
+          </pre>
+        </div>
+        <div class="row mt-3">
+            <div class="embed col-2 mb-1">
+              <img src="resources/e62b2fea-d409-4787-9fd7-aca744a70388.png" />
+            </div>
+        </div>
+    </div>
+    <div class="leaf failed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+          <span class="fs-6 ms-2">homePageURLTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">5s</span>
+        </div>
+      </div>
+      <p class="desc"></p>
+        <pre class="py-2 mt-2 mb-4">java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because the return value of "com.qa.opecart.pages.HomePage.getHomePageURL()" is null
+	at com.qa.opencart.test.HomePageTest.homePageURLTest(HomePageTest.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre>
+        <div class="mt-3">
+          <pre class="pb-0">
+Verifying Home Page URL
+home page url==>null
+          </pre>
+        </div>
+        <div class="row mt-3">
+            <div class="embed col-2 mb-1">
+              <img src="resources/5a200147-34ac-45c1-b234-8ded2363aaa8.png" />
+            </div>
+        </div>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">logoutLinkExistTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">434ms</span>
+        </div>
+      </div>
+      <p class="desc"></p>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">searchTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">1s</span>
+        </div>
+      </div>
+      <p class="desc">[macbook, 3]</p>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">searchTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">947ms</span>
+        </div>
+      </div>
+      <p class="desc">[imac, 1]</p>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">searchTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">421ms</span>
+        </div>
+      </div>
+      <p class="desc">[samsung, 2]</p>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">searchTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">409ms</span>
+        </div>
+      </div>
+      <p class="desc">[canon, 1]</p>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">searchTest</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">10s</span>
+        </div>
+      </div>
+      <p class="desc">[airtel, 0]</p>
+    </div>
+  </div>
+
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+          <div class="border-bottom py-5"></div>
+      </div>
+  </div>
+
+  <script>
+    const stats1Annotation = {'total': 1, 'passed': 0};
+    const stats1 = [
+      { result: 'Passed', count: 0, bg: 'rgb(140, 197, 83)' },
+      { result: 'Failed', count: 1, bg: 'rgb(233,80,113)' },
+      { result: 'Skipped', count: 0, bg: 'rgb(221, 91, 96)' }
+    ];
+      const stats2Annotation = {'total': 3, 'passed': 1};
+      const stats2 = [
+        { result: 'Passed', count: 1, bg: 'rgb(140, 197, 83)' },
+        { result: 'Failed', count: 2, bg: 'rgb(233,80,113)' },
+        { result: 'Skipped', count: 0, bg: 'rgb(221, 91, 96)' }
+      ];
+      const stats3Annotation = {'total': 33, 'passed': 25};
+      const stats3 = [
+        { result: 'Passed', count: 25, bg: 'rgb(140, 197, 83)' },
+        { result: 'Failed', count: 8, bg: 'rgb(233,80,113)' },
+        { result: 'Skipped', count: 0, bg: 'rgb(221, 91, 96)' }
+      ];
+     
+  </script>
+    <script src="https://cdn.jsdelivr.net/gh/anshooarora/chaintest@47a8aee36827ccc0dd3f5a4b4655846d3d463c15/cdn/simple/version/chaintest-pkg.js"></script>
+
+    <div id="sys-info-modal" class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h6 class="modal-title">System</h6>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+              onclick="toggleSysInfo(false)"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table">
+              <tbody>
+                  <tr>
+                    <td>java.version</td>
+                    <td>23.0.1</td>
+                  </tr>
+                  <tr>
+                    <td>java.vm.name</td>
+                    <td>Java HotSpot(TM) 64-Bit Server VM</td>
+                  </tr>
+                  <tr>
+                    <td>java.vm.vendor</td>
+                    <td>Oracle Corporation</td>
+                  </tr>
+                  <tr>
+                    <td>java.class.version</td>
+                    <td>67.0</td>
+                  </tr>
+                  <tr>
+                    <td>java.runtime.name</td>
+                    <td>Java(TM) SE Runtime Environment</td>
+                  </tr>
+                  <tr>
+                    <td>os.name</td>
+                    <td>Windows 11</td>
+                  </tr>
+                  <tr>
+                    <td>os.arch</td>
+                    <td>amd64</td>
+                  </tr>
+                  <tr>
+                    <td>os.version</td>
+                    <td>10.0</td>
+                  </tr>
+                  <tr>
+                    <td>Build#</td>
+                    <td>1.0</td>
+                  </tr>
+                  <tr>
+                    <td>Headless#</td>
+                    <td>false</td>
+                  </tr>
+                  <tr>
+                    <td>Incognito#</td>
+                    <td>false</td>
+                  </tr>
+                  <tr>
+                    <td>Owner#</td>
+                    <td>Naveen Automation Labs</td>
+                  </tr>
+                  <tr>
+                    <td>Build#</td>
+                    <td>1.0</td>
+                  </tr>
+                  <tr>
+                    <td>Headless#</td>
+                    <td>false</td>
+                  </tr>
+                  <tr>
+                    <td>Incognito#</td>
+                    <td>false</td>
+                  </tr>
+                  <tr>
+                    <td>Owner#</td>
+                    <td>Naveen Automation Labs</td>
+                  </tr>
+                  <tr>
+                    <td>Build#</td>
+                    <td>1.0</td>
+                  </tr>
+                  <tr>
+                    <td>Headless#</td>
+                    <td>false</td>
+                  </tr>
+                  <tr>
+                    <td>Incognito#</td>
+                    <td>false</td>
+                  </tr>
+                  <tr>
+                    <td>Owner#</td>
+                    <td>Naveen Automation Labs</td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+              onclick="toggleSysInfo(false)">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div id="info-modal" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title">ChainTest Simple Generator - Shortcuts</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+            onclick="toggleInfoModal(false)"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table">
+            <tbody>
+                <tr>
+                  <td>p</td>
+                  <td>Toggle passed tests</td>
+                </tr>
+                <tr>
+                  <td>s</td>
+                  <td>Toggle skipped tests</td>
+                </tr>
+                <tr>
+                  <td>esc</td>
+                  <td>Reset all filters</td>
+                </tr>
+                <tr>
+                  <td>L</td>
+                  <td>Toggle theme (light/dark)</td>
+                </tr>
+                <tr>
+                  <td>f</td>
+                  <td>Toggle failed tests</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+            onclick="toggleInfoModal(false)">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="attachment-modal" class="modal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title">Attachment</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+            onclick="toggleAttachmentModal(false)"></button>
+        </div>
+        <div class="modal-body">
+          <img src="" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+            onclick="toggleAttachmentModal(false)">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
