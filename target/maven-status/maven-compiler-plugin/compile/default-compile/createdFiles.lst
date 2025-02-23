@@ -1,4 +1,5 @@
 com\qa\opencart\listeners\TestAllureListener.class
+com\qa\opecart\pages\MyPage.class
 com\qa\opencart\util\ElementUtil.class
 com\qa\opecart\pages\RegistrationPage.class
 com\qa\opecart\pages\ProductInfoPage.class
@@ -6,11 +7,13 @@ com\qa\opencart\factory\OptionManager.class
 com\qa\opencart\util\JavaScriptUtil.class
 com\qa\opencart\listeners\AnnotationTransformer.class
 com\qa\opecart\constants\AppError.class
+com\qa\opecart\pages\User.class
 com\qa\opecart\pages\HomePage.class
 com\qa\opencart\listeners\Retry.class
 com\qa\opencart\util\ExcelUtil.class
 com\qa\opencart\factory\DriverFactory.class
 com\qa\opecart\pages\CommonPage.class
+com\qa\opecart\pages\FeaturePage.class
 com\qa\opencart\exception\FrameworkException.class
 com\qa\opecart\constants\AppConstant.class
 com\qa\opecart\pages\LoginPage.class

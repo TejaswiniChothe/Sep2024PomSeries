@@ -1,12 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 33, Failures: 2, Errors: 0, Skipped: 6, Time elapsed: 50.87 s <<< FAILURE! - in TestSuite
-homePageURLTest(com.qa.opencart.test.HomePageTest)  Time elapsed: 4.845 s  <<< FAILURE!
-java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because the return value of "com.qa.opecart.pages.HomePage.getHomePageURL()" is null
-	at com.qa.opencart.test.HomePageTest.homePageURLTest(HomePageTest.java:32)
-
-loginPageTitleTest(com.qa.opencart.test.LoginPageTest)  Time elapsed: 0.108 s  <<< FAILURE!
-java.lang.AssertionError: ==Title is not matched== expected [Account Logins] but found [null]
-	at com.qa.opencart.test.LoginPageTest.loginPageTitleTest(LoginPageTest.java:32)
-
+Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 33.09 s - in TestSuite
