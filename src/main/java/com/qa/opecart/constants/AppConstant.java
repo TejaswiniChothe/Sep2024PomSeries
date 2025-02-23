@@ -7,7 +7,7 @@ public class AppConstant {
 	public final static String REGISTRATION_PAGE_TITLE = "Register Account";
 	public final static String REGISTRATION_PAGE_URL_FRACTION = "route=account/register";
 	public final static String HOME_PAGE_TITLE = "My Account";
-	public final static String HOME_PAGE_URL_FRACTION = "route=account/accounts";
+	public final static String HOME_PAGE_URL_FRACTION = "route=account/account";
 	public final static int DEFAULT_TIME_OUT = 5;
 	public final static int SHORT_TIME_OUT = 10;
 	public final static int MEDIUM_TIME_OUT = 15;
