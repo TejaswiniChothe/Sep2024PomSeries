@@ -2,7 +2,7 @@ package com.qa.opecart.constants;
 
 public class AppConstant {
 
-	public final static String LOGIN_PAGE_TITLE = "Account Logins";
+	public final static String LOGIN_PAGE_TITLE = "Account Login";
 	public final static String LOGIN_PAGE_URL_FRACTION = "route=account/login";
 	public final static String REGISTRATION_PAGE_TITLE = "Register Account";
 	public final static String REGISTRATION_PAGE_URL_FRACTION = "route=account/register";
