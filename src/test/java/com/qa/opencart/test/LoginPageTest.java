@@ -27,7 +27,7 @@ public class LoginPageTest extends Base {
 	@Severity(SeverityLevel.MINOR)
 	@Test
 	public void loginPageTitleTest() {
-		ChainTestListener.log("Verifying Loging Page Title");
+		ChainTestListener.log("Verifying Loging Page Title:");
 		String actTitle = loginPage.getLoginPageTitle();
 		Assert.assertEquals(actTitle, AppConstant.LOGIN_PAGE_TITLE, AppError.TITLE_NOT_FOUND_ERROR);
 
