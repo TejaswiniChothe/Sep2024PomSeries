@@ -52,7 +52,7 @@ public class LoginPageTest extends Base {
 	@Severity(SeverityLevel.BLOCKER)
 	@Test(priority = Integer.MAX_VALUE)
 	public void loginTest() {
-		homePage = loginPage.doLogin(prop.getProperty("username"), System.getProperty("AppPassword"));
+		homePage = loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
 		Assert.assertEquals(homePage.getHomePageTitle(), AppConstant.HOME_PAGE_TITLE, AppError.TITLE_NOT_FOUND_ERROR);
 	}
 
