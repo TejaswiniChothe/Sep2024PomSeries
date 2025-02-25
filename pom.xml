@@ -4,17 +4,18 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>Sep2024PomSeries</groupId>
-	<artifactId>Sep2024PomSeries</artifactId>
+	<groupId>Sept2024POMSeries</groupId>
+	<artifactId>Sept2024POMSeries</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>Sep2024PomSeries</name>
+	<name>Sept2024POMSeries</name>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.release>17</maven.compiler.release>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 		<aspectj.version>1.9.19</aspectj.version>
 
 	</properties>
@@ -26,12 +27,14 @@
 			<artifactId>selenium-java</artifactId>
 			<version>4.27.0</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>7.10.2</version>
+			<version>7.7.0</version>
 		</dependency>
+
+
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
@@ -83,6 +86,7 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>${aspectj.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
@@ -93,6 +97,7 @@
 	</dependencies>
 
 	<build>
+
 		<plugins>
 
 			<plugin>
@@ -115,29 +120,31 @@
 					<forkCount>3</forkCount>
 					<reuseForks>true</reuseForks>
 					<suiteXmlFiles>
-						<suiteXmlFile>
-							src/test/resource/testrunner/testng_regression.xml</suiteXmlFile>
-						<!--						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>-->
-
+						 <suiteXmlFile>src/test/resource/testrunner/testng_regression.xml</suiteXmlFile> --> 
+<!--						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>-->
 					</suiteXmlFiles>
 
 					<argLine>
 						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
 					</argLine>
-
-
 				</configuration>
+
 				<dependencies>
 					<dependency>
 						<groupId>org.aspectj</groupId>
 						<artifactId>aspectjweaver</artifactId>
 						<version>${aspectj.version}</version>
 					</dependency>
+					
 				</dependencies>
+				
+
 			</plugin>
 
 
 		</plugins>
+
+
 
 	</build>
 </project>
