@@ -49,7 +49,7 @@ public class LoginPage {
 
 	@Step("login with username: {0} and password: {1}")
 	public HomePage doLogin(String username, String pwd) {
-		System.out.println("App creds are: ==> " + username + " : " + pwd);
+		System.out.println("App creds are : ==> " + username + " : " + pwd);
 		eleUtil.waitForWebElementVisible(emailId, AppConstant.DEFAULT_TIME_OUT).sendKeys(username);
 		eleUtil.doSendkeys(password, pwd);
 		eleUtil.doClick(loginBtn);
