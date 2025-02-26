@@ -28,7 +28,7 @@ public class LoginPage {
 
 	// 2. Public page actions - methods (features)
 
-	@Step("getLoginPageTitle")
+	@Step("getLoginPageTitles")
 	public String getLoginPageTitle() {
 		String title = eleUtil.waitforTitleIs(AppConstant.LOGIN_PAGE_TITLE, AppConstant.DEFAULT_TIME_OUT);
 		ChainTestListener.log("Title of page is : " + title);
