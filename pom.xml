@@ -120,7 +120,8 @@
 					<forkCount>3</forkCount>
 					<reuseForks>true</reuseForks>
 					<suiteXmlFiles>
-						<!-- <suiteXmlFile>src/test/resources/testrunner/testng_regression.xml</suiteXmlFile> --> 
+						<!--
+						<suiteXmlFile>src/test/resources/testrunner/testng_regression.xml</suiteXmlFile> -->
 						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
 					</suiteXmlFiles>
 
@@ -135,6 +136,8 @@
 						<artifactId>aspectjweaver</artifactId>
 						<version>${aspectj.version}</version>
 					</dependency>
+
+					
 				</dependencies>
 
 			</plugin>
