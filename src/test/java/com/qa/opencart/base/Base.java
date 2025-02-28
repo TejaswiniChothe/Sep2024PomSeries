@@ -32,13 +32,15 @@ public class Base {
 	protected CommonPage commonPage;
 	protected RegistrationPage registartionPage;
 
-	@Parameters({ "browser" })
+	@Parameters({ "browser", "browserversion", "testname" })
 	@BeforeTest(description = "setup: init the driver and properties")
-	public void setup(String browserName) {
+	public void setup(String browserName, String browserVersion, String testName) {
 		df = new DriverFactory();
 		prop = df.initProp();
 		if (browserName != null) {
 			prop.setProperty("browser", browserName);
+			prop.setProperty("browserversion", browserVersion);
+			prop.setProperty("testname", testName);
 		}
 		driver = df.initDriver(prop);
 		loginPage = new LoginPage(driver);
